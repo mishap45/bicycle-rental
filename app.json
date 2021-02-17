@@ -1,0 +1,12 @@
+{
+  "name": "bicycle-rental",
+  "displayName": "bicycle-rental",
+  "expo": {
+    "name": "bicycle-rental",
+    "slug": "bicycle-rental",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
