@@ -18,7 +18,7 @@
     "moduleResolution":"Node"
   },
   "filesGlob": [
-    "typings/index.d.ts",
+    "typings/declaration.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "node_modules/typescript/lib/lib.es6.d.ts"
