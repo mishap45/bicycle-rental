@@ -8,6 +8,7 @@ type dataTypes = Array<{
 
     bicycles: Array<{
         id_bicycle: number
+        name: string
         img: ImageSourcePropType
         weight: number
         diameter: number
@@ -27,6 +28,7 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
@@ -36,6 +38,17 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 3,
+                name: 'gg',
                 img: require('../assets/images/bike1.jpg'),
                 weight: 12.4,
                 diameter: 29,
@@ -54,6 +67,7 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
@@ -63,6 +77,77 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 3,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 4,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 5,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 6,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 7,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 8,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 9,
+                name: 'gg',
                 img: require('../assets/images/bike1.jpg'),
                 weight: 12.4,
                 diameter: 29,
@@ -81,6 +166,7 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
@@ -90,6 +176,37 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 3,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 4,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 5,
+                name: 'gg',
                 img: require('../assets/images/bike1.jpg'),
                 weight: 12.4,
                 diameter: 29,
@@ -108,6 +225,7 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
@@ -117,6 +235,17 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 3,
+                name: 'gg',
                 img: require('../assets/images/bike1.jpg'),
                 weight: 12.4,
                 diameter: 29,
@@ -135,6 +264,7 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
@@ -144,6 +274,67 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 3,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 4,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 5,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 6,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 7,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 8,
+                name: 'gg',
                 img: require('../assets/images/bike1.jpg'),
                 weight: 12.4,
                 diameter: 29,
@@ -162,6 +353,7 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
@@ -171,6 +363,57 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 3,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 4,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 5,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 6,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 7,
+                name: 'gg',
                 img: require('../assets/images/bike1.jpg'),
                 weight: 12.4,
                 diameter: 29,
@@ -189,6 +432,7 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
@@ -198,6 +442,7 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
+                name: 'gg',
                 img: require('../assets/images/bike1.jpg'),
                 weight: 12.4,
                 diameter: 29,
@@ -216,6 +461,7 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
@@ -225,6 +471,87 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 3,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 4,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 5,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 6,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 7,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 8,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 9,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 10,
+                name: 'gg',
                 img: require('../assets/images/bike1.jpg'),
                 weight: 12.4,
                 diameter: 29,
@@ -243,6 +570,7 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
@@ -252,6 +580,77 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 3,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 4,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 5,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 6,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 7,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 8,
+                name: 'gg',
+                img: require('../assets/images/bike1.jpg'),
+                weight: 12.4,
+                diameter: 29,
+                countGear: 14,
+                type: 'Шоссейные велосипеды',
+                price: 160
+            },
+            {
+                id_bicycle: 9,
+                name: 'gg',
                 img: require('../assets/images/bike1.jpg'),
                 weight: 12.4,
                 diameter: 29,
@@ -270,21 +669,13 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
+                name: 'gg',
                 img: require('../assets/images/bike.png'),
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
                 type: 'Горный MTB',
                 price: 150
-            },
-            {
-                id_bicycle: 2,
-                img: require('../assets/images/bike1.jpg'),
-                weight: 12.4,
-                diameter: 29,
-                countGear: 14,
-                type: 'Шоссейные велосипеды',
-                price: 160
             }
         ]
     },

@@ -7,15 +7,37 @@ import * as Location from 'expo-location'
 import * as Permissions from 'expo-permissions'
 
 import CustomMarker from '../components/CustomMarker'
+import MapControls from '../components/MapControls'
 import data from '../data/data'
 
 type MapScreenPropsTypes = {
-    navigation: NavigationScreenProp<any,any>
+    navigation: NavigationScreenProp<any, any>
 }
 
 const MapScreen:React.FC<MapScreenPropsTypes> = ({ navigation }) => {
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
+    const [loc, setLoc] = useState({ coords: {latitude: 49.553517, longitude: 25.594767} });
+
+    let map: MapView;
+
+    const currentLocation = () => {
+        if (errorMsg) {
+            alert(errorMsg);
+        } else if (location) {
+            map.animateToRegion({
+                latitude: location.coords.latitude,
+                longitude: location.coords.longitude,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421
+            }, 2000);
+            setLoc(location);
+        }
+    };
+
+    const onRegionChange = (region: any) => {
+        setLoc({ coords: region })
+    };
 
     useEffect(() => {
         (async () => {
@@ -36,31 +58,25 @@ const MapScreen:React.FC<MapScreenPropsTypes> = ({ navigation }) => {
         })();
     }, []);
 
-    let loc = { coords: {latitude: 49.553517, longitude: 25.594767} };
-    if (errorMsg) {
-        loc = errorMsg;
-    } else if (location) {
-        loc = location;
-    }
-
     const markers = data.map( d => <CustomMarker key={d.id} navigation={navigation}
                                                  latitude={d.latitude} longitude={d.longitude} bicycles={d.bicycles} />);
 
     return <View style={styles.container}>
         <MapView style={styles.mapStyle}
+                 ref = {ref => map = ref}
                  provider={PROVIDER_GOOGLE}
                  showsUserLocation
                  initialRegion={{
-                     /*latitude: 49.553517,
-                     longitude: 25.594767,*/
                      latitude: loc.coords.latitude,
                      longitude: loc.coords.longitude,
                      latitudeDelta: 0.0922,
-                     longitudeDelta: 0.0421,
+                     longitudeDelta: 0.0421
                  }}
+                 onRegionChange={onRegionChange}
         >
             {markers}
         </MapView>
+        <MapControls currentLocation={currentLocation} />
     </View>
 };
 
@@ -69,12 +85,16 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
 
     mapStyle: {
         width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height,
+        height: Dimensions.get('window').height
+    },
+
+    text: {
+        position: 'absolute'
     }
 });
 

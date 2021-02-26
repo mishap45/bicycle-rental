@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, View, StyleSheet, Image, ImageSourcePropType } from 'react-native'
 
 type BicycleBlockPropsTypes = {
+    name: string
     img: ImageSourcePropType
     weight: number
     diameter: number
@@ -10,7 +11,7 @@ type BicycleBlockPropsTypes = {
     price: number
 }
 
-const BicycleBlock:React.FC<BicycleBlockPropsTypes> = ({ img, weight, diameter, countGear, type, price }) => {
+const BicycleBlock:React.FC<BicycleBlockPropsTypes> = ({ img, weight, diameter, countGear, type, price, name }) => {
     return <View style={styles.block}>
         <View>
             <Image style={{ width: 120, height: 120 }}
@@ -19,7 +20,7 @@ const BicycleBlock:React.FC<BicycleBlockPropsTypes> = ({ img, weight, diameter, 
 
         <View style={styles.charactersBlock}>
             <View>
-                <Text style={styles.header}>TopRider</Text>
+                <Text style={styles.header}>{name}</Text>
             </View>
 
             <View style={styles.characters}>

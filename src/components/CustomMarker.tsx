@@ -11,6 +11,7 @@ type CustomMarkerPropsTypes = {
 
     bicycles: Array<{
         id_bicycle: number
+        name: string
         img: ImageSourcePropType
         weight: number
         diameter: number
