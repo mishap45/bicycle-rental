@@ -31,7 +31,7 @@ const MapStack = () => {
                 name="BicyclesScreen"
                 component={BicyclesScreen}
                 options={{
-                    headerTitle: () => <HeaderText text='Bicycles' />,
+                    headerTitle: () => <HeaderText text='Велосипеди' />,
                     headerBackTitle: 'back',
                     headerTintColor: '#fff',
                     headerStyle: {
@@ -43,34 +43,42 @@ const MapStack = () => {
     );
 };
 
+type IconNameTypes = 'bicycle' | 'map-marker' | 'info-circle' | 'user-circle-o'
+
 const AppNavigation = () => {
     return (
         <Tab.Navigator
             initialRouteName="Map"
-            tabBarOptions={{
-                activeTintColor: '#8675a9',
-                inactiveTintColor: '#c3aed6'
-            }}
             screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused }) => {
-                    let iconName, colorIcon;
+                    let iconName: IconNameTypes, colorIcon, background;
 
                     if (route.name === 'Map') {
                         iconName = 'map-marker';
-                        colorIcon = focused ? '#8675a9' : '#c3aed6'
+                        colorIcon = focused ? '#8675a9' : '#c3aed6';
+                        background = focused ? '#eaffd0' : '#fff'
                     } else if (route.name === 'Race') {
                         iconName = 'bicycle';
-                        colorIcon = focused ? '#8675a9' : '#c3aed6'
+                        colorIcon = focused ? '#8675a9' : '#c3aed6';
+                        background = focused ? '#eaffd0' : '#fff'
                     } else if (route.name === 'Info') {
                         iconName = 'info-circle';
-                        colorIcon = focused ? '#8675a9' : '#c3aed6'
+                        colorIcon = focused ? '#8675a9' : '#c3aed6';
+                        background = focused ? '#eaffd0' : '#fff'
                     } else if (route.name === 'Profile') {
                         iconName = 'user-circle-o';
-                        colorIcon = focused ? '#8675a9' : '#c3aed6'
+                        colorIcon = focused ? '#8675a9' : '#c3aed6';
+                        background = focused ? '#eaffd0' : '#fff'
                     }
 
-                    // @ts-ignore
-                    return <FontAwesome name={iconName} size={24} color={colorIcon} />;
+                    return <FontAwesome style={{
+                        padding: 5,
+                        backgroundColor: background,
+                        borderRadius: 20,
+                        overflow: 'hidden',
+                        width: 40, height: 40, textAlign: 'center',
+                        lineHeight: 30
+                    }} name={iconName} size={24} color={colorIcon}/>;
                 },
             })}
         >
