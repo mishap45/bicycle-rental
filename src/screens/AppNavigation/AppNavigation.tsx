@@ -1,47 +1,13 @@
 import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { FontAwesome } from '@expo/vector-icons'
 
-import MapScreen from '../MapScreen'
-import BicyclesScreen from '../BicyclesScreen'
 import RaceScreen from '../RaceScreen'
 import InfoScreen from '../InfoScreen'
-import ProfileScreen from '../ProfileScreen'
-import HeaderText from '../../components/HeaderText'
+import MapStack from './MapStack'
+import ProfileStack from './ProfileStack'
 
 const Tab = createBottomTabNavigator();
-const Stack = createStackNavigator();
-
-const MapStack = () => {
-    return (
-        <Stack.Navigator>
-            <Stack.Screen
-                name="MapScreen"
-                component={MapScreen}
-                options={{
-                    headerTitle: () => <HeaderText text='Bicycle Rental' />,
-                    headerStyle: {
-                        backgroundColor: '#C3AED6',
-                    }
-                }}
-            />
-
-            <Stack.Screen
-                name="BicyclesScreen"
-                component={BicyclesScreen}
-                options={{
-                    headerTitle: () => <HeaderText text='Велосипеди' />,
-                    headerBackTitle: 'back',
-                    headerTintColor: '#fff',
-                    headerStyle: {
-                        backgroundColor: '#C3AED6',
-                    }
-                }}
-            />
-        </Stack.Navigator>
-    );
-};
 
 type IconNameTypes = 'bicycle' | 'map-marker' | 'info-circle' | 'user-circle-o'
 
@@ -112,7 +78,7 @@ const AppNavigation = () => {
 
             <Tab.Screen
                 name="Profile"
-                component={ProfileScreen}
+                component={ProfileStack}
                 options={{
                     tabBarLabel: () => null,
                     title: 'Profile'
