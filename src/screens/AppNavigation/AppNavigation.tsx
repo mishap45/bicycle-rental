@@ -21,7 +21,7 @@ const AppNavigation = () => {
 
                     if (route.name === 'Map') {
                         iconName = 'map-marker';
-                        colorIcon = focused ? '#8675a9' : '#c3aed6';
+                        colorIcon = focused ? '#8675a9' : '#c3aed5';
                         background = focused ? '#eaffd0' : '#fff'
                     } else if (route.name === 'Race') {
                         iconName = 'bicycle';
