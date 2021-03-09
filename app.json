@@ -1,0 +1,34 @@
+{
+  "name": "bicycle-rental",
+  "displayName": "bicycle-rental",
+  "expo": {
+    "name": "bicycle-rental",
+    "slug": "bicycle-rental",
+
+    "version": "0.1",
+    "orientation": "portrait",
+    "icon": "./assets/bicycleLogo.png",
+    "splash": {
+      "image": "./assets/loadScreen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bicycleRental",
+      "buildNumber": "0.1"
+    },
+    "android": {
+      "package": "com.bicycleRental",
+      "versionCode": 1
+    }
+  }
+}
