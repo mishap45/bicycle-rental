@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, Dimensions, Button } from 'react-native'
 import { NavigationScreenProp } from 'react-navigation'
 import RBSheet from 'react-native-raw-bottom-sheet'
 
-import Header from '../components/Header'
 import RaceButton from '../components/RaceButton'
 
 type RaceScreenPropsTypes = {
@@ -13,8 +12,13 @@ type RaceScreenPropsTypes = {
 const RaceScreen:React.FC<RaceScreenPropsTypes> = ({ navigation }) => {
     const refRBSheet = useRef();
 
+    const navigateScreens = (screen: string) => {
+        navigation.navigate(screen);
+        // @ts-ignore
+        refRBSheet.current.close()
+    };
+
     return <View>
-        <Header text={'Поїздка'}/>
         <View style={styles.container}>
             <Text style={styles.headerTextRace}>У вас немає відкритих поїздок</Text>
             <RaceButton onPress={() => navigation.navigate('Map')}
@@ -31,7 +35,7 @@ const RaceScreen:React.FC<RaceScreenPropsTypes> = ({ navigation }) => {
                         wrapper: {
                             backgroundColor: "transparent",
                             marginHorizontal: 15,
-                            marginBottom: 60
+                            marginBottom: '25%'
                         },
                         container: {
                             borderRadius: 25
@@ -45,11 +49,11 @@ const RaceScreen:React.FC<RaceScreenPropsTypes> = ({ navigation }) => {
                         або створіть новий</Text>
 
                     <View style={{ marginTop: 30 }}>
-                        <Button title={'Підключитись'} onPress={() => alert('connect')} />
+                        <Button title={'Підключитись'} onPress={() => navigateScreens('Login')} />
                     </View>
 
                     <View style={{ marginTop: 30 }}>
-                        <Button title={'Створити'} onPress={() => alert('create')} />
+                        <Button title={'Створити'} onPress={() => navigateScreens('Register')} />
                     </View>
                 </RBSheet>
             </View>

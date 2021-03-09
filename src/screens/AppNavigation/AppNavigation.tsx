@@ -2,10 +2,10 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { FontAwesome } from '@expo/vector-icons'
 
-import RaceScreen from '../RaceScreen'
 import InfoScreen from '../InfoScreen'
 import MapStack from './MapStack'
 import ProfileStack from './ProfileStack'
+import RaceStack from './RaceStack'
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +21,7 @@ const AppNavigation = () => {
 
                     if (route.name === 'Map') {
                         iconName = 'map-marker';
-                        colorIcon = focused ? '#8675a9' : '#c3aed6';
+                        colorIcon = focused ? '#8675a9' : '#c3aed5';
                         background = focused ? '#eaffd0' : '#fff'
                     } else if (route.name === 'Race') {
                         iconName = 'bicycle';
@@ -60,7 +60,7 @@ const AppNavigation = () => {
 
             <Tab.Screen
                 name="Race"
-                component={RaceScreen}
+                component={RaceStack}
                 options={{
                     tabBarLabel: () => null,
                     title: 'Race'
