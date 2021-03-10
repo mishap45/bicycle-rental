@@ -3,7 +3,11 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import HeaderText from '../../components/HeaderText'
 import ProfileScreen from '../ProfileScreen'
-import {View, Text} from "react-native";
+import LoginScreen from '../LoginScreen'
+import RegisterScreen from '../RegisterScreen'
+import PriceScreen from '../PriceScreen'
+import SettingsScreen from '../SettingsScreen'
+import ClientScreen from '../ClientScreen'
 
 const Stack = createStackNavigator();
 
@@ -11,7 +15,7 @@ const ProfileStack = () => {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                name="ProfileScreen"
+                name="Profile"
                 component={ProfileScreen}
                 options={{
                     headerTitle: () => <HeaderText text='Профіль' />,
@@ -22,10 +26,62 @@ const ProfileStack = () => {
             />
 
             <Stack.Screen
-                name="BicyclesScreen"
-                component={() => <View><Text>gg</Text></View>}
+                name="Login"
+                component={LoginScreen}
                 options={{
-                    headerTitle: () => <HeaderText text='Велосипеди' />,
+                    headerTitle: () => <HeaderText text='Логін' />,
+                    headerBackTitle: 'back',
+                    headerTintColor: '#fff',
+                    headerStyle: {
+                        backgroundColor: '#C3AED6',
+                    }
+                }}
+            />
+
+            <Stack.Screen
+                name="Register"
+                component={RegisterScreen}
+                options={{
+                    headerTitle: () => <HeaderText text='Реєстрація' />,
+                    headerBackTitle: 'back',
+                    headerTintColor: '#fff',
+                    headerStyle: {
+                        backgroundColor: '#C3AED6',
+                    }
+                }}
+            />
+
+            <Stack.Screen
+                name="Price"
+                component={PriceScreen}
+                options={{
+                    headerTitle: () => <HeaderText text='Ціни' />,
+                    headerBackTitle: 'back',
+                    headerTintColor: '#fff',
+                    headerStyle: {
+                        backgroundColor: '#C3AED6',
+                    }
+                }}
+            />
+
+            <Stack.Screen
+                name="Settings"
+                component={SettingsScreen}
+                options={{
+                    headerTitle: () => <HeaderText text='Мова' />,
+                    headerBackTitle: 'back',
+                    headerTintColor: '#fff',
+                    headerStyle: {
+                        backgroundColor: '#C3AED6',
+                    }
+                }}
+            />
+
+            <Stack.Screen
+                name="Client"
+                component={ClientScreen}
+                options={{
+                    headerTitle: () => <HeaderText text='Обслуговування клієнтів' />,
                     headerBackTitle: 'back',
                     headerTintColor: '#fff',
                     headerStyle: {

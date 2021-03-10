@@ -1,21 +1,27 @@
 import React from 'react'
 import { ScrollView, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { NavigationScreenProp } from 'react-navigation'
+
 import ProfileSectionHeader from '../components/ProfileSectionHeader'
 import ProfileSectionBlock from '../components/ProfileSectionBlock'
 
-const ProfileScreen = () => {
+type ProfileScreenPropsTypes = {
+    navigation: NavigationScreenProp<any, any>
+}
+
+const ProfileScreen:React.FC<ProfileScreenPropsTypes> = ({ navigation }) => {
     return <ScrollView>
         <ProfileSectionHeader text={'Обліковий запис'} />
-        <ProfileSectionBlock text={'Логін'} icon={'login'} rightType={'empty'} borderBottom borderTop />
+        <ProfileSectionBlock navigation={navigation} screen={'Login'} text={'Логін'} icon={'login'} rightType={'empty'} borderBottom borderTop />
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Register')}>
             <Text style={styles.greenText}>Підписатись</Text>
         </TouchableOpacity>
 
         <ProfileSectionHeader text={'Інше'} />
-        <ProfileSectionBlock text={'Налаштування'} icon={'settings'} rightType={'arrow'} borderTop />
-        <ProfileSectionBlock text={'Ціни'} icon={'prices'} rightType={'arrow'} />
-        <ProfileSectionBlock text={'Обслуговування клієнтів'} icon={'client'} rightType={'arrow'} />
+        <ProfileSectionBlock navigation={navigation} screen={'Settings'} text={'Налаштування'} icon={'settings'} rightType={'arrow'} borderTop />
+        <ProfileSectionBlock navigation={navigation} screen={'Price'} text={'Ціни'} icon={'prices'} rightType={'arrow'} />
+        <ProfileSectionBlock navigation={navigation} screen={'Client'} text={'Обслуговування клієнтів'} icon={'client'} rightType={'arrow'} />
         <ProfileSectionBlock text={'Версія'} icon={'version'} rightType={'version'} borderBottom />
     </ScrollView>
 };

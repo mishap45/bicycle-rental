@@ -3,6 +3,7 @@ import { TouchableOpacity, Text, View, StyleSheet } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { Ionicons } from '@expo/vector-icons'
 import { AntDesign } from '@expo/vector-icons'
+import { NavigationScreenProp } from 'react-navigation'
 
 type ProfileSectionBlockTypes = {
     text: string
@@ -11,11 +12,22 @@ type ProfileSectionBlockTypes = {
 
     borderBottom?: boolean
     borderTop?: boolean
+
+    navigation?: NavigationScreenProp<any, any>
+    screen?: string
 }
 
-const ProfileSectionBlock:React.FC<ProfileSectionBlockTypes> = ({ text, icon, rightType, borderBottom, borderTop }) => {
+const ProfileSectionBlock:React.FC<ProfileSectionBlockTypes> = ({
+                                                                    text,
+                                                                    icon,
+                                                                    rightType,
+                                                                    borderBottom,
+                                                                    borderTop,
+                                                                    navigation,
+                                                                    screen
+                                                                }) => {
     return (
-        <TouchableOpacity style={[styles.block, styles.blockStyle,
+        <TouchableOpacity disabled={rightType === 'version'} onPress={() => navigation.navigate(screen)} style={[styles.block, styles.blockStyle,
             {
                 borderBottomWidth: borderBottom ? 1 : 0.5,
                 borderTopWidth: borderTop ? 1 : .5
