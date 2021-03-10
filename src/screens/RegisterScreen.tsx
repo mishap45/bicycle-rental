@@ -13,8 +13,8 @@ const RegisterScreen = () => {
             {step === 2 && <ScrollView>
                 <Text style={styles.header}>Виберіть тариф</Text>
 
-                <PricingCard step={step} setStep={setStep} price={'100'} tariff={'Тариф на три дні'}/>
-                <PricingCard step={step} setStep={setStep} price={'100'} tariff={'Тариф на три дні'}/>
+                <PricingCard price={'100'} tariff={'Тариф на три дні'}/>
+                <PricingCard price={'100'} tariff={'Тариф на три дні'}/>
             </ScrollView>}
         </View>
     )

@@ -1,55 +1,58 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, Text, TouchableOpacity, Modal, TouchableHighlight } from 'react-native'
+import { View, StyleSheet, Text, TouchableOpacity, Modal } from 'react-native'
 import { Fontisto } from '@expo/vector-icons'
+
+import LoginScreen from '../screens/LoginScreen'
 
 type PricingCardPropsTypes = {
     price: string
     tariff: string
-    setStep: (step: number) => void
-    step: number
 }
 
-const PricingCard: React.FC<PricingCardPropsTypes> = ({price, tariff, setStep, step}) => {
+const PricingCard: React.FC<PricingCardPropsTypes> = ({price, tariff}) => {
     const [modalVisible, setModalVisible] = useState(false);
 
-    return <> <View style={styles.priceCard_Container}>
-        <Text style={styles.price}>{price + ' грн.'}</Text>
+    return <View style={styles.priceCard_Container}>
+        <Text style={styles.price}>{price} грн.</Text>
 
         <Text style={styles.price_Info}>{tariff}</Text>
 
-        <TouchableOpacity onPress={() => { setModalVisible(true); setStep(3) }} style={styles.price_Button}>
+        <TouchableOpacity onPress={() => {
+            setModalVisible(true)
+        }} style={styles.price_Button}>
             <Fontisto name="bicycle" style={styles.iconStyle} size={16} color={'white'}/>
             <Text style={styles.TextStyle}>Вибрати</Text>
         </TouchableOpacity>
-    </View>
 
-        <View style={styles.centeredView}>
-            <Modal
-                animationType="slide"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={() => {
-                    alert('Modal has been closed.');
-                }}>
-                <View style={styles.centeredView}>
-                    <View style={styles.modalView}>
-                        <Text style={styles.modalText}>Hello World!</Text>
+        <Modal
+            animationType="slide"
+            transparent={true}
+            visible={modalVisible}
+            onRequestClose={() => {
+                alert('Modal has been closed.');
+                setModalVisible(!modalVisible)
+            }}>
+            <View style={styles.centeredView}>
+                <View style={styles.modalView}>
+                    <Text style={styles.modalText}>Введіть пошту і пароль</Text>
+                    <LoginScreen marginT={10} marginH={10} textButton={'Зареєструватись'} />
 
-                        <TouchableHighlight
-                            style={{...styles.openButton, backgroundColor: '#2196F3'}}
-                            onPress={() => {
-                                setModalVisible(!modalVisible);
-                            }}>
-                            <Text style={styles.textStyle}>Hide Modal</Text>
-                        </TouchableHighlight>
-                    </View>
+                    <TouchableOpacity style={styles.close} onPress={() => setModalVisible(!modalVisible)}>
+                        <Fontisto name="close" size={24} color="rgba(51, 51, 51, .5)" />
+                    </TouchableOpacity>
                 </View>
-            </Modal>
-        </View>
-    </>
+            </View>
+        </Modal>
+    </View>
 };
 
 const styles = StyleSheet.create({
+    close: {
+        position: 'absolute',
+        top: 10,
+        right: 10
+    },
+
     priceCard_Container: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -98,15 +101,16 @@ const styles = StyleSheet.create({
         fontSize: 15
     },
 
-
     centeredView: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 22,
     },
+
     modalView: {
-        margin: 20,
+        width: '85%',
+        margin: 5,
         backgroundColor: 'white',
         borderRadius: 20,
         padding: 35,
@@ -120,19 +124,15 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
         elevation: 5,
     },
-    openButton: {
-        backgroundColor: '#F194FF',
-        borderRadius: 20,
-        padding: 10,
-        elevation: 2,
-    },
+
     textStyle: {
         color: 'white',
         fontWeight: 'bold',
         textAlign: 'center',
     },
+
     modalText: {
-        marginBottom: 15,
+        marginBottom: 18,
         textAlign: 'center',
     },
 });

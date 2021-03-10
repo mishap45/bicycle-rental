@@ -11,12 +11,15 @@ type errorsTypes = {
 }
 
 type LoginScreenPropsTypes = {
-    navigation: NavigationScreenProp<any, any>
+    navigation?: NavigationScreenProp<any, any>
+    marginT: number
+    marginH: number
+    textButton: string
 }
 
-const LoginScreen: React.FC<LoginScreenPropsTypes> = ({ navigation }) => {
+const LoginScreen: React.FC<LoginScreenPropsTypes> = ({ navigation, marginT = 150, marginH = 20, textButton = 'Увійти' }) => {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, {marginTop: marginT, paddingHorizontal: marginH}]}>
             <Formik
                 initialValues={{ email: '', password: '' }}
                 validate={values => {
@@ -79,7 +82,7 @@ const LoginScreen: React.FC<LoginScreenPropsTypes> = ({ navigation }) => {
                         />
 
                         <Button
-                            title="Увійти"
+                            title={textButton}
                             loading={isSubmitting}
                             buttonStyle={{ backgroundColor: '#16c79a', height: 50, borderRadius: 50 }}
                             onPress={handleSubmit}
@@ -93,9 +96,7 @@ const LoginScreen: React.FC<LoginScreenPropsTypes> = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        paddingHorizontal: 25
+        width: '100%'
     }
 });
 
