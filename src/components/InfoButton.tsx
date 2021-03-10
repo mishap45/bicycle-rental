@@ -4,13 +4,15 @@ import { StyleSheet } from 'react-native'
 
 type InfoButtonPropsTypes = {
     text: string
+    onPress: () => void
 }
 
-const InfoButton:React.FC<InfoButtonPropsTypes> = ({ text }) => {
+const InfoButton:React.FC<InfoButtonPropsTypes> = ({ text, onPress }) => {
     return <Button
         title={text}
         buttonStyle={styles.block}
         titleStyle={styles.textStyle}
+        onPress={onPress}
     />
 };
 

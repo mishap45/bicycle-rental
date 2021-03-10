@@ -1,12 +1,15 @@
 import React from 'react'
-import {View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
+import { NavigationScreenProp } from 'react-navigation'
 
-import Header from '../components/Header'
-import InfoButton from "../components/InfoButton";
+import InfoButton from '../components/InfoButton'
 
-const RaceScreen = () => {
+type InfoScreenPropsTypes = {
+    navigation: NavigationScreenProp<any, any>
+}
+
+const InfoScreen:React.FC<InfoScreenPropsTypes> = ({ navigation }) => {
     return <View>
-        <Header text={'Інформація'}/>
         <Text style={styles.headerTextRace}>Маркер</Text>
         <View style={styles.infoMarkerContainer}>
             <Image source={require('../assets/icons/bicyclePoint.png')}
@@ -27,8 +30,8 @@ const RaceScreen = () => {
             Якщо у вас є вже акаунт то нажміть авторизуватись.
         </Text>
         
-        <InfoButton text={'Авторизуватись'}/>
-        <InfoButton text={'Зв`язатись з нами'}/>
+        <InfoButton onPress={() => navigation.navigate('Login')} text={'Авторизуватись'}/>
+        <InfoButton onPress={() => navigation.navigate('Client')} text={'Зв`язатись з нами'}/>
 
     </View>
 };
@@ -62,4 +65,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default RaceScreen
+export default InfoScreen

@@ -2,7 +2,7 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { FontAwesome } from '@expo/vector-icons'
 
-import InfoScreen from '../InfoScreen'
+import InfoStack from './InfoStack'
 import MapStack from './MapStack'
 import ProfileStack from './ProfileStack'
 import RaceStack from './RaceStack'
@@ -69,7 +69,7 @@ const AppNavigation = () => {
 
             <Tab.Screen
                 name="Info"
-                component={InfoScreen}
+                component={InfoStack}
                 options={{
                     tabBarLabel: () => null,
                     title: 'Info'
