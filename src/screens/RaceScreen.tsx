@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
-import { View, Text, StyleSheet, Dimensions, Button } from 'react-native'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import { NavigationScreenProp } from 'react-navigation'
 import RBSheet from 'react-native-raw-bottom-sheet'
+import { Button } from 'react-native-elements'
 
 import RaceButton from '../components/RaceButton'
 
@@ -48,12 +49,12 @@ const RaceScreen:React.FC<RaceScreenPropsTypes> = ({ navigation }) => {
                     <Text style={styles.bottomText}>Підключайтесь до вашого існуючого акаунту
                         або створіть новий</Text>
 
-                    <View style={{ marginTop: 30 }}>
-                        <Button title={'Підключитись'} onPress={() => navigateScreens('Login')} />
+                    <View>
+                        <Button type="clear" style={{ marginTop: 30 }} title={'Підключитись'} onPress={() => navigateScreens('Login')} />
                     </View>
 
-                    <View style={{ marginTop: 30 }}>
-                        <Button title={'Створити'} onPress={() => navigateScreens('Register')} />
+                    <View>
+                        <Button type="clear" style={{ marginTop: 30 }} title={'Створити'} onPress={() => navigateScreens('Register')} />
                     </View>
                 </RBSheet>
             </View>

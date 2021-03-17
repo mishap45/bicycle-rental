@@ -8,6 +8,7 @@ import RegisterScreen from '../RegisterScreen'
 import PriceScreen from '../PriceScreen'
 import SettingsScreen from '../SettingsScreen'
 import ClientScreen from '../ClientScreen'
+import PayScreen from "../PayScreen";
 
 const Stack = createStackNavigator();
 
@@ -82,6 +83,19 @@ const ProfileStack = () => {
                 component={ClientScreen}
                 options={{
                     headerTitle: () => <HeaderText text='Обслуговування клієнтів' />,
+                    headerBackTitle: 'back',
+                    headerTintColor: '#fff',
+                    headerStyle: {
+                        backgroundColor: '#C3AED6',
+                    }
+                }}
+            />
+
+            <Stack.Screen
+                name="Pay"
+                component={PayScreen}
+                options={{
+                    headerTitle: () => <HeaderText text='Оплата' />,
                     headerBackTitle: 'back',
                     headerTintColor: '#fff',
                     headerStyle: {

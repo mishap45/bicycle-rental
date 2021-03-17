@@ -5,7 +5,7 @@ import { Entypo } from '@expo/vector-icons'
 import { MaterialIcons } from '@expo/vector-icons'
 
 const SettingsScreen = () => {
-    const [checked, setChecked] = useState(true)
+    const [checked, setChecked] = useState(true);
 
     return <View>
         <CheckBox

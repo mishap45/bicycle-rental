@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
-import {View, StyleSheet, ScrollView, Text} from 'react-native'
+import { View, StyleSheet, ScrollView, Text } from 'react-native'
 
 import DatePiker from '../components/DatePiker'
-import PricingCard from "../components/PricingCard";
+import PricingCard from '../components/PricingCard'
+import { NavigationScreenProp } from 'react-navigation'
 
-const RegisterScreen = () => {
+type RegisterScreenPropsTypes = {
+    navigation: NavigationScreenProp<any, any>
+}
+
+const RegisterScreen:React.FC<RegisterScreenPropsTypes> = ({ navigation }) => {
     const [step, setStep] = useState(1);
 
     return (
@@ -13,8 +18,8 @@ const RegisterScreen = () => {
             {step === 2 && <ScrollView>
                 <Text style={styles.header}>Виберіть тариф</Text>
 
-                <PricingCard price={'100'} tariff={'Тариф на три дні'}/>
-                <PricingCard price={'100'} tariff={'Тариф на три дні'}/>
+                <PricingCard ChooseTariff={() => navigation.navigate('Pay', { tariff: 'gg' })} price={'100'} tariff={'Тариф на три дні'}/>
+                <PricingCard ChooseTariff={() => navigation.navigate('Pay', { tariff: 'gg' })} price={'100'} tariff={'Тариф на три дні'}/>
             </ScrollView>}
         </View>
     )

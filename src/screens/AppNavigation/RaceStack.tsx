@@ -5,6 +5,7 @@ import HeaderText from '../../components/HeaderText'
 import RaceScreen from '../RaceScreen'
 import LoginScreen from '../LoginScreen'
 import RegisterScreen from '../RegisterScreen'
+import PayScreen from '../PayScreen'
 
 const Stack = createStackNavigator();
 
@@ -40,6 +41,19 @@ const ProfileStack = () => {
                 component={RegisterScreen}
                 options={{
                     headerTitle: () => <HeaderText text='Реєстрація' />,
+                    headerBackTitle: 'back',
+                    headerTintColor: '#fff',
+                    headerStyle: {
+                        backgroundColor: '#C3AED6',
+                    }
+                }}
+            />
+
+            <Stack.Screen
+                name="Pay"
+                component={PayScreen}
+                options={{
+                    headerTitle: () => <HeaderText text='Оплата' />,
                     headerBackTitle: 'back',
                     headerTintColor: '#fff',
                     headerStyle: {
