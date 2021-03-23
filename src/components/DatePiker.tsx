@@ -5,9 +5,10 @@ import { Button } from 'react-native-elements'
 
 type DatePikerPropsTypes = {
     setStep: (step: number) => void
+    setBirthdayUser: (date: string) => void
 }
 
-const DatePiker:React.FC<DatePikerPropsTypes> = ({ setStep }) => {
+const DatePiker:React.FC<DatePikerPropsTypes> = ({ setStep, setBirthdayUser }) => {
     const [date, setDate] = useState(new Date(1598051730000));
 
     // @ts-ignore
@@ -15,6 +16,11 @@ const DatePiker:React.FC<DatePikerPropsTypes> = ({ setStep }) => {
         const currentDate = selectedDate || date;
         setDate(currentDate);
     };
+
+    const onPress = () => {
+        setBirthdayUser(date.toString())
+        setStep(2)
+    }
 
     return (
         <View style={styles.container}>
@@ -33,7 +39,7 @@ const DatePiker:React.FC<DatePikerPropsTypes> = ({ setStep }) => {
             <Button
                 title="Далі"
                 buttonStyle={{ backgroundColor: '#222', height: 50, borderRadius: 50 }}
-                onPress={() => setStep(2)}
+                onPress={onPress}
             />
         </View>
     )

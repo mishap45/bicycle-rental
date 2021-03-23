@@ -7,9 +7,11 @@ import LoginScreen from '../screens/LoginScreen'
 type PricingCardPropsTypes = {
     price: string
     tariff: string
+
+    setTarriffUser: (tarriff: string) => void
 }
 
-const PricingCard: React.FC<PricingCardPropsTypes> = ({price, tariff}) => {
+const PricingCard: React.FC<PricingCardPropsTypes> = ({ price, tariff, setTarriffUser }) => {
     const [modalVisible, setModalVisible] = useState(false);
 
     return <View style={styles.priceCard_Container}>
@@ -19,6 +21,7 @@ const PricingCard: React.FC<PricingCardPropsTypes> = ({price, tariff}) => {
 
         <TouchableOpacity onPress={() => {
             setModalVisible(true)
+            setTarriffUser(tariff)
         }} style={styles.price_Button}>
             <Fontisto name="bicycle" style={styles.iconStyle} size={16} color={'white'}/>
             <Text style={styles.TextStyle}>Вибрати</Text>

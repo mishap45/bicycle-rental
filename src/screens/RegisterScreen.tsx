@@ -6,15 +6,27 @@ import PricingCard from "../components/PricingCard";
 
 const RegisterScreen = () => {
     const [step, setStep] = useState(1);
+    const [birthdayUser, setBirthdayUser] = useState('');
+    const [tarriffUser, setTarriffUser] = useState('');
 
+    const [newUserData, setNewUserData] = useState({data: {
+        email: '',
+        password: '',
+        birthday: birthdayUser,
+        tarriff: tarriffUser,
+        payCardNumber: '',
+        payCardDate: '',
+        payCardBackNumber: ''
+    }})
+    console.log('data', birthdayUser, 'dataa', newUserData)
     return (
         <View style={styles.container}>
-            {step === 1 && <DatePiker setStep={setStep} />}
+            {step === 1 && <DatePiker setStep={setStep} setBirthdayUser={setBirthdayUser} />}
             {step === 2 && <ScrollView>
                 <Text style={styles.header}>Виберіть тариф</Text>
 
-                <PricingCard price={'100'} tariff={'Тариф на три дні'}/>
-                <PricingCard price={'100'} tariff={'Тариф на три дні'}/>
+                <PricingCard setTarriffUser={setTarriffUser} price={'100'} tariff={'Тариф на три дні'}/>
+                <PricingCard setTarriffUser={setTarriffUser} price={'100'} tariff={'Тариф на три дні'}/>
             </ScrollView>}
         </View>
     )
