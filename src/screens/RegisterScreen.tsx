@@ -11,15 +11,20 @@ type RegisterScreenPropsTypes = {
 
 const RegisterScreen:React.FC<RegisterScreenPropsTypes> = ({ navigation }) => {
     const [step, setStep] = useState(1);
+    const [birthdayUser, setBirthdayUser] = useState('');
 
     return (
         <View style={styles.container}>
-            {step === 1 && <DatePiker setStep={setStep} />}
+            {step === 1 && <DatePiker setStep={setStep} setBirthdayUser={setBirthdayUser} />}
             {step === 2 && <ScrollView>
                 <Text style={styles.header}>Виберіть тариф</Text>
 
-                <PricingCard ChooseTariff={() => navigation.navigate('Pay', { tariff: 'gg' })} price={'100'} tariff={'Тариф на три дні'}/>
-                <PricingCard ChooseTariff={() => navigation.navigate('Pay', { tariff: 'gg' })} price={'100'} tariff={'Тариф на три дні'}/>
+                <PricingCard ChooseTariff={(tariff: string) => navigation.navigate('Pay',
+                    { tariff: 'Тариф на три дні', birthdayUser: birthdayUser, tariffUser: tariff})}
+                             price={'100'} tariff={'Тариф на три дні'}/>
+                <PricingCard ChooseTariff={(tariff: string) => navigation.navigate('Pay',
+                    { tariff: 'Тариф на сім днів', birthdayUser: birthdayUser, tarriffUser: tariff })}
+                             price={'100'} tariff={'Тариф на сім днів'}/>
             </ScrollView>}
         </View>
     )

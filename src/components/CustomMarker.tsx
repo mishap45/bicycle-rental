@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavigationScreenProp } from 'react-navigation'
 import { MarkerAnimated } from 'react-native-maps'
-import { Image, ImageSourcePropType } from 'react-native'
+import { Image } from 'react-native'
 
 type CustomMarkerPropsTypes = {
     navigation: NavigationScreenProp<any,any>
@@ -12,7 +12,7 @@ type CustomMarkerPropsTypes = {
     bicycles: Array<{
         id_bicycle: number
         name: string
-        img: ImageSourcePropType
+        status: boolean
         weight: number
         diameter: number
         countGear: number

@@ -1,24 +1,35 @@
-import React from 'react'
-import { Text, View, StyleSheet, Image, ImageSourcePropType } from 'react-native'
+import React, { useState } from 'react'
+import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native'
+import { Button } from 'react-native-elements'
 
 type BicycleBlockPropsTypes = {
     name: string
-    img: ImageSourcePropType
     weight: number
     diameter: number
     countGear: number
     type: string
     price: number
+    status: boolean
 }
 
-const BicycleBlock:React.FC<BicycleBlockPropsTypes> = ({ img, weight, diameter, countGear, type, price, name }) => {
-    return <View style={styles.block}>
+const BicycleBlock:React.FC<BicycleBlockPropsTypes> = ({ weight, diameter, countGear, type, price, name, status }) => {
+    const [statusBike, setStatusBike] = useState(status);
+    const [changed, setChanged] = useState(false);
+
+    return <View style={[styles.block, { opacity: statusBike ? 1 : .5 }]}>
         <View>
             <Image style={{ width: 120, height: 120 }}
-                   source={img}/>
+                   source={require('../assets/images/bicycle.png')}/>
         </View>
 
         <View style={styles.charactersBlock}>
+            { changed &&
+                <TouchableOpacity style={{ width: 42, height: 42, position: 'absolute', right: 75, zIndex: 10 }}
+                                  onPress={() => { setChanged(false); setStatusBike(!statusBike) }}>
+                    <Image source={require('../assets/icons/close.png')}
+                           style={{ width: 42, height: 42 }}
+                    />
+                </TouchableOpacity>}
             <View>
                 <Text style={styles.header}>{name}</Text>
             </View>
@@ -32,6 +43,9 @@ const BicycleBlock:React.FC<BicycleBlockPropsTypes> = ({ img, weight, diameter, 
 
             <View>
                 <Text style={styles.price}>Ціна за годину {price} грн/год</Text>
+                <Button title={statusBike ? 'Замовити' : 'Замовлено'} buttonStyle={{ width: 150, marginTop: 15,
+                        marginLeft: 25, backgroundColor: '#C3AED6' }}
+                        disabled={!statusBike} onPress={() => { setStatusBike(!statusBike); setChanged(true) }} />
             </View>
         </View>
     </View>

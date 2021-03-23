@@ -1,5 +1,3 @@
-import { ImageSourcePropType } from 'react-native'
-
 type dataTypes = Array<{
     id: number
 
@@ -9,7 +7,7 @@ type dataTypes = Array<{
     bicycles: Array<{
         id_bicycle: number
         name: string
-        img: ImageSourcePropType
+        status: boolean
         weight: number
         diameter: number
         countGear: number
@@ -28,8 +26,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: false,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
@@ -38,8 +36,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 2',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -48,8 +46,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 3,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 3',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -67,8 +65,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: true,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
@@ -77,8 +75,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 2',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -87,8 +85,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 3,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 3',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -97,8 +95,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 4,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 4',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -107,8 +105,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 5,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 5',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -117,8 +115,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 6,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 6',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -127,8 +125,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 7,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 7',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -137,8 +135,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 8,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 8',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -148,7 +146,7 @@ const data:dataTypes = [
             {
                 id_bicycle: 9,
                 name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -166,8 +164,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: true,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
@@ -176,8 +174,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 2',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -186,8 +184,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 3,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 3',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -196,8 +194,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 4,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 4',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -206,8 +204,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 5,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 5',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -225,8 +223,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: true,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
@@ -235,8 +233,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 2',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -245,8 +243,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 3,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 3',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -264,8 +262,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: true,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
@@ -274,8 +272,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 2',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -284,8 +282,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 3,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 3',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -294,8 +292,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 4,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 4',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -304,8 +302,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 5,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 5',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -314,8 +312,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 6,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 6',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -324,8 +322,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 7,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 7',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -334,8 +332,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 8,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 8',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -353,8 +351,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: true,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
@@ -363,8 +361,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 2',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -373,8 +371,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 3,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 3',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -383,8 +381,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 4,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 4',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -393,8 +391,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 5,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 5',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -403,8 +401,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 6,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 6',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -413,8 +411,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 7,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 7',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -432,8 +430,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: true,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
@@ -442,8 +440,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 2',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -461,8 +459,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: true,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
@@ -471,8 +469,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 2',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -481,8 +479,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 3,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 3',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -491,8 +489,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 4,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 4',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -501,8 +499,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 5,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 5',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -511,8 +509,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 6,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 6',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -521,8 +519,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 7,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 7',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -531,8 +529,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 8,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 8',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -541,8 +539,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 9,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 9',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -551,8 +549,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 10,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 10',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -570,8 +568,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: true,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,
@@ -580,8 +578,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 2,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 2',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -590,8 +588,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 3,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 3',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -600,8 +598,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 4,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 4',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -610,8 +608,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 5,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 5',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -620,8 +618,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 6,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 6',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -630,8 +628,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 7,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 7',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -640,8 +638,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 8,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 8',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -650,8 +648,8 @@ const data:dataTypes = [
             },
             {
                 id_bicycle: 9,
-                name: 'gg',
-                img: require('../assets/images/bike1.jpg'),
+                name: 'bike 9',
+                status: true,
                 weight: 12.4,
                 diameter: 29,
                 countGear: 14,
@@ -669,8 +667,8 @@ const data:dataTypes = [
         bicycles: [
             {
                 id_bicycle: 1,
-                name: 'gg',
-                img: require('../assets/images/bike.png'),
+                name: 'bike 1',
+                status: true,
                 weight: 8,
                 diameter: 26,
                 countGear: 21,

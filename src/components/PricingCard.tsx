@@ -1,51 +1,26 @@
-import React, { useState } from 'react'
-import { View, StyleSheet, Text, TouchableOpacity, Modal } from 'react-native'
+import React from 'react'
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { Fontisto } from '@expo/vector-icons'
-
-import LoginScreen from '../screens/LoginScreen'
 
 type PricingCardPropsTypes = {
     price: string
     tariff: string
 
-    ChooseTariff: () => void
+    ChooseTariff: (tariff: string) => void
 }
 
 const PricingCard: React.FC<PricingCardPropsTypes> = ({ price, tariff, ChooseTariff }) => {
-    const [modalVisible, setModalVisible] = useState(false);
-
     return <View style={styles.priceCard_Container}>
         <Text style={styles.price}>{price} грн.</Text>
 
         <Text style={styles.price_Info}>{tariff}</Text>
 
         <TouchableOpacity onPress={() => {
-            //setModalVisible(true)
-            ChooseTariff()
+            ChooseTariff(tariff)
         }} style={styles.price_Button}>
             <Fontisto name="bicycle" style={styles.iconStyle} size={16} color={'white'}/>
             <Text style={styles.TextStyle}>Вибрати</Text>
         </TouchableOpacity>
-
-        <Modal
-            animationType="slide"
-            transparent={true}
-            visible={modalVisible}
-            onRequestClose={() => {
-                alert('Modal has been closed.');
-                setModalVisible(!modalVisible)
-            }}>
-            <View style={styles.centeredView}>
-                <View style={styles.modalView}>
-                    <Text style={styles.modalText}>Введіть пошту і пароль</Text>
-                    <LoginScreen marginT={10} marginH={10} textButton={'Зареєструватись'} />
-
-                    <TouchableOpacity style={styles.close} onPress={() => setModalVisible(!modalVisible)}>
-                        <Fontisto name="close" size={24} color="rgba(51, 51, 51, .5)" />
-                    </TouchableOpacity>
-                </View>
-            </View>
-        </Modal>
     </View>
 };
 
