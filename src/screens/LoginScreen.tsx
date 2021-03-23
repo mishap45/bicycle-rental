@@ -4,6 +4,14 @@ import { Input, Button } from 'react-native-elements'
 import { MaterialIcons } from '@expo/vector-icons'
 import { Formik } from 'formik'
 import { NavigationScreenProp } from 'react-navigation'
+import { useQuery } from '@apollo/client'
+
+import { ALL_USERS } from '../graphql/login_graphql'
+
+type TDataApollo = {
+    email: string
+    password: string
+}
 
 type errorsTypes = {
     email?: string
@@ -18,6 +26,8 @@ type LoginScreenPropsTypes = {
 }
 
 const LoginScreen: React.FC<LoginScreenPropsTypes> = ({ navigation, marginT = 150, marginH = 20, textButton = 'Увійти' }) => {
+    const { data } = useQuery(ALL_USERS);
+    
     return (
         <View style={[styles.container, {marginTop: marginT, paddingHorizontal: marginH}]}>
             <Formik
@@ -40,9 +50,13 @@ const LoginScreen: React.FC<LoginScreenPropsTypes> = ({ navigation, marginT = 15
                 }}
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
-                        alert(JSON.stringify(values, null, 2));
+                        const email = data.listUsers.filter((e: TDataApollo) => e.email.includes(values.email))
+                        const pass = email.map((p: TDataApollo) => p.password.includes(values.password))
+                        console.log(pass[0] === true ? 'true' : 'false')
                         setSubmitting(false);
-                        navigation.navigate('Race')
+                        values.email = '';
+                        values.password = '';
+                        navigation.goBack()
                     }, 400);
                 }}
             >
